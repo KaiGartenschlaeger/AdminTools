@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF823B14-DD8C-4206-A781-19808819146D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdminTools</RootNamespace>
+    <AssemblyName>AdminTools</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>AdminTools.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExtendedControls">
+      <HintPath>..\Libraries\ExtendedControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.ConnectionUI, Version=0.0.0.0, Culture=neutral, PublicKeyToken=f4ca07f51760da93, processorArchitecture=MSIL">
+      <HintPath>..\packages\DataConnectionDialog.1.2\lib\Microsoft.Data.ConnectionUI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.ConnectionUI.Dialog, Version=0.0.0.0, Culture=neutral, PublicKeyToken=f4ca07f51760da93, processorArchitecture=MSIL">
+      <HintPath>..\packages\DataConnectionDialog.1.2\lib\Microsoft.Data.ConnectionUI.Dialog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tools.Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Tools.Helper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CultureItem.cs" />
+    <Compile Include="Forms\FormBinary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBinary.Designer.cs">
+      <DependentUpon>FormBinary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormColorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormColorDialog.designer.cs">
+      <DependentUpon>FormColorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEncoding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEncoding.Designer.cs">
+      <DependentUpon>FormEncoding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormGuid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGuid.Designer.cs">
+      <DependentUpon>FormGuid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormBase64.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormBase64.Designer.cs">
+      <DependentUpon>FormBase64.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormDummyFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormDummyFile.Designer.cs">
+      <DependentUpon>FormDummyFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormFilecompare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormFilecompare.Designer.cs">
+      <DependentUpon>FormFilecompare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormFileFingerprint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormFileFingerprint.Designer.cs">
+      <DependentUpon>FormFileFingerprint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormFlags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormFlags.Designer.cs">
+      <DependentUpon>FormFlags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormHashes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormHashes.Designer.cs">
+      <DependentUpon>FormHashes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormHexConverter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormHexConverter.Designer.cs">
+      <DependentUpon>FormHexConverter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormRandomData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormRandomData.Designer.cs">
+      <DependentUpon>FormRandomData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormRandomizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormRandomizer.Designer.cs">
+      <DependentUpon>FormRandomizer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormRegexDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormRegexDesigner.Designer.cs">
+      <DependentUpon>FormRegexDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormStoredProcedureSignature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStoredProcedureSignature.Designer.cs">
+      <DependentUpon>FormStoredProcedureSignature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTextDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTextDialog.Designer.cs">
+      <DependentUpon>FormTextDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormToStringHelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormToStringHelper.Designer.cs">
+      <DependentUpon>FormToStringHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormBinary.resx">
+      <DependentUpon>FormBinary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormColorDialog.resx">
+      <DependentUpon>FormColorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEncoding.resx">
+      <DependentUpon>FormEncoding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGuid.resx">
+      <DependentUpon>FormGuid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormBase64.resx">
+      <DependentUpon>FormBase64.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDummyFile.resx">
+      <DependentUpon>FormDummyFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormFilecompare.resx">
+      <DependentUpon>FormFilecompare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormFileFingerprint.resx">
+      <DependentUpon>FormFileFingerprint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormFlags.resx">
+      <DependentUpon>FormFlags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormHashes.resx">
+      <DependentUpon>FormHashes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormHexConverter.resx">
+      <DependentUpon>FormHexConverter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormRandomData.resx">
+      <DependentUpon>FormRandomData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormRandomizer.resx">
+      <DependentUpon>FormRandomizer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormRegexDesigner.resx">
+      <DependentUpon>FormRegexDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStoredProcedureSignature.resx">
+      <DependentUpon>FormStoredProcedureSignature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTextDialog.resx">
+      <DependentUpon>FormTextDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormToStringHelper.resx">
+      <DependentUpon>FormToStringHelper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
